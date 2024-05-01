@@ -265,7 +265,7 @@ class Location:    # класс локации, все атрибуты можн
                         pygame.mixer.music.stop()
                         if isinstance(self.next_locations[opt], str):  # Проверка на тип объекта - строка
                             webbrowser.open_new_tab(self.next_locations[opt])  # Открытие внешней ссылки
-                            return "menu"  # Возврат в меню после открытия ссылки
+                            main()  # Возврат в меню после открытия ссылки
                         else:
                             self.next_locations[opt].run()  # Переход к следующей локации
                             return None
